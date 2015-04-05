@@ -1,0 +1,17 @@
+/* ==========================================================================
+   GALLERY
+   ========================================================================== */
+
+.Gallery {
+    margin-top: $-space;
+    margin-bottom: $-space;
+
+    @include media(md) {
+        margin-top: $-space--large;
+        margin-bottom: $-space--large;
+    }
+
+    > .Grid__cell {
+        padding-bottom: $-space;
+    }
+}

@@ -1,0 +1,67 @@
+/* ==========================================================================
+   TEXT
+   ========================================================================== */
+
+p {
+    margin-bottom: $-line-height;
+}
+
+.text-large {
+    @include font-size(18px);
+    font-weight: 400;
+
+    @include media(md) {
+        @include font-size(20px);
+    }
+
+    @include media(lg) {
+        @include font-size(22px);
+    }
+}
+
+/* Emboldened Elements
+   ========================================================================== */
+
+strong, b {
+    font-weight: 600;
+}
+
+/* Blockquote
+   ========================================================================== */
+
+blockquote {
+    padding-left: $-space;
+    font-style: italic;
+    color: $-color-gray;
+    border-left: 1px solid $-border-color;
+}
+
+/* Horizontal Rules
+   ========================================================================== */
+
+hr {
+    margin-bottom: ($-space - 1px);
+    border: none;
+    border-bottom: 1px solid $-border-color;
+}
+
+/**
+ * A small horizontal line used in conjuction with headers and headings.
+ */
+
+.h {
+    margin-top: ($-space - 1px);
+    width: 55px;
+    border-width: 1.5px;
+}
+
+/* Misc
+   ========================================================================== */
+
+.caps {
+    text-transform: uppercase;
+}
+
+.spaced {
+    letter-spacing: 1px;
+}

@@ -1,0 +1,66 @@
+/* ==========================================================================
+   IMAGE-COMPARE
+   ========================================================================== */
+
+.Image-compare {
+    position: relative;
+    overflow: hidden;
+    margin-top: $-space--small;
+    margin-bottom: $-space;
+
+    @include media(md) {
+        margin-top: $-space;
+        margin-bottom: $-space--large;
+    }
+}
+
+.Image-compare img {
+    display: block;
+    width: 100%;
+    max-width: none; /* Reset base image max-width */
+}
+
+.Image-compare__resize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/**
+ * Image-compare seperator and handle
+ */
+
+.Image-compare__handle {
+    /* Seperator */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: 6px;
+    margin-left: -3px;
+
+    background-color: $-color-white;
+    cursor: ew-resize;
+
+    /* Handle */
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 12px;
+        height: 50px;
+        margin: -25px 0 0 -9px;
+        background-color: $-color-white;
+        transition: all .4s ease-in-out;
+    }
+
+    /* Active state for dragging */
+    &.is-draggable:after {
+        width: 10px;
+        margin-left: -8px;
+    }
+}

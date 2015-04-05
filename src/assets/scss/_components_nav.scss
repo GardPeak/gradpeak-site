@@ -1,0 +1,43 @@
+/* ==========================================================================
+   NAV
+   ========================================================================== */
+
+
+$-Nav-font: $-heading-font-family;
+$-Nav-hover-color: lighten($-color-light-green, 10);
+$-Nav-active-color: $-color-light-green;
+
+.Nav {
+    @extend .u-cf;
+}
+
+.Nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.Nav__item {
+    margin: $-space 0;
+}
+
+.Nav__link {
+    display: inline-block;
+    @include font-size(24px);
+    font-family: $-Nav-font;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @include media(sm) {
+        @include font-size(42px);
+
+        @include ui-states {
+            text-decoration: none;
+            color: $-Nav-hover-color;
+        }
+    }
+
+    &.is-active {
+        color: $-Nav-active-color;
+    }
+}

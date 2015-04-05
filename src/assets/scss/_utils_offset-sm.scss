@@ -1,0 +1,133 @@
+/* ==========================================================================
+   OFFSET: breakpoint sm
+   ========================================================================== */
+
+/**
+ * Specify the proportional offset before an object.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 3, 4, 5, 6, 8, 10, 12 section
+ */
+
+@include media(sm) {
+
+    .u-sm-offsetNone {
+        margin-left: 0 !important;
+    }
+
+    .u-sm-offset1of2,
+    .u-sm-offset2of4,
+    .u-sm-offset3of6,
+    .u-sm-offset4of8,
+    .u-sm-offset5of10,
+    .u-sm-offset6of12 {
+        margin-left: 50% !important;
+    }
+
+    .u-sm-offset1of3,
+    .u-sm-offset2of6,
+    .u-sm-offset3of9,
+    .u-sm-offset4of12 {
+        margin-left: 33.3333333% !important;
+    }
+    .u-sm-offset2of3,
+    .u-sm-offset4of6,
+    .u-sm-offset6of9,
+    .u-sm-offset8of12 {
+        margin-left: 66.6666666% !important;
+    }
+
+    .u-sm-offset1of4,
+    .u-sm-offset2of8,
+    .u-sm-offset3of12 {
+        margin-left: 25% !important;
+    }
+    .u-sm-offset3of4,
+    .u-sm-offset6of8,
+    .u-sm-offset9of12 {
+        margin-left: 75% !important;
+    }
+
+    .u-sm-offset1of5,
+    .u-sm-offset2of10 {
+        margin-left: 20% !important;
+    }
+    .u-sm-offset2of5,
+    .u-sm-offset4of10 {
+        margin-left: 40% !important;
+    }
+    .u-sm-offset3of5,
+    .u-sm-offset6of10 {
+        margin-left: 60% !important;
+    }
+    .u-sm-offset4of5,
+    .u-sm-offset8of10 {
+        margin-left: 80% !important;
+    }
+
+    .u-sm-offset1of6,
+    .u-sm-offset2of12 {
+        margin-left: 16.6666666% !important;
+    }
+    .u-sm-offset5of6,
+    .u-sm-offset10of12 {
+        margin-left: 83.3333333% !important;
+    }
+
+    .u-sm-offset1of8 {
+        margin-left: 12.5% !important;
+    }
+    .u-sm-offset3of8 {
+        margin-left: 37.5% !important;
+    }
+    .u-sm-offset5of8 {
+        margin-left: 62.5% !important;
+    }
+    .u-sm-offset7of8 {
+        margin-left: 87.5% !important;
+    }
+
+    .u-sm-offset1of9 {
+        margin-left: 11.1111111% !important;
+    }
+    .u-sm-offset2of9 {
+        margin-left: 22.2222222% !important;
+    }
+    .u-sm-offset4of9 {
+        margin-left: 44.4444444% !important;
+    }
+    .u-sm-offset5of9 {
+        margin-left: 55.5555555% !important;
+    }
+    .u-sm-offset7of9 {
+        margin-left: 77.7777777% !important;
+    }
+    .u-sm-offset8of9 {
+        margin-left: 88.8888888% !important;
+    }
+
+    .u-sm-offset1of10 {
+        margin-left: 10% !important;
+    }
+    .u-sm-offset3of10 {
+        margin-left: 30% !important;
+    }
+    .u-sm-offset7of10 {
+        margin-left: 70% !important;
+    }
+    .u-sm-offset9of10 {
+        margin-left: 90% !important;
+    }
+
+    .u-sm-offset1of12 {
+        margin-left: 8.3333333% !important;
+    }
+    .u-sm-offset5of12 {
+        margin-left: 41.6666666% !important;
+    }
+    .u-sm-offset7of12 {
+        margin-left: 58.3333333% !important;
+    }
+    .u-sm-offset11of12 {
+        margin-left: 91.6666666% !important;
+    }
+}

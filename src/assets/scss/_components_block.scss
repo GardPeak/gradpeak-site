@@ -1,0 +1,13 @@
+/* ==========================================================================
+   BLOCK
+   ========================================================================== */
+
+.Block {
+    padding-top: $-space;
+    padding-bottom: $-space;
+
+    @include media(md) {
+        padding-top: $-space--large;
+        padding-bottom: $-space--large;
+    }
+}

@@ -1,0 +1,32 @@
+/* ==========================================================================
+   HEADING-GROUP
+   ========================================================================== */
+
+/**
+ * Reverse order of heading and subheading for browsers supporting `flexbox`
+ */
+
+.Heading-group {
+    display: flex;
+    box-orient: vertical;
+    flex-direction: column;
+
+    .page--case-study & {
+        @include media(md) {
+            text-align: center;
+        }
+    }
+}
+
+.Heading-group__title {
+    order: 2;
+}
+
+.Heading-group__sub {
+    order: 1;
+    margin-bottom: 0;
+
+    @include media(xs) {
+        margin-top: $-space;
+    }
+}

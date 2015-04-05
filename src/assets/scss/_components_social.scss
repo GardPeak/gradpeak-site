@@ -1,0 +1,76 @@
+/* ==========================================================================
+   SOCIAL
+   ========================================================================== */
+
+$-Social-background: $-color-white;
+$-Social-border: darken($-color-faint-gray, 5);
+$-Social-hover-color: $-color-light-green;
+
+.Social {
+    margin-bottom: $-space;
+
+    /**
+     * Social modifications for footer
+     */
+    .Foot & {
+        text-align: center;
+
+        @include media(sm) {
+            float: left;
+            width: 50%;
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+
+    li {
+        margin-right: $-space;
+
+        @include media(sm) {
+            margin-right: ($-space / 4);
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    a {
+        display: block;
+        width: 44px;
+        height: 44px;
+        background-color: $-Social-background;
+        background-repeat: no-repeat;
+        border: 1px solid $-Social-border;
+        border-radius: 50%;
+        transition: background-color .25s 0 ease-in;
+
+        &:hover {
+            border: 1px solid $-Social-hover-color;
+        }
+    }
+}
+
+/**
+ * Social icons
+ */
+
+.Social__facebook a {
+    background-image: url(../../images/css/social-facebook.svg);
+    background-position: 50% 50%;
+}
+
+.Social__twitter a {
+    background-image: url(../../images/css/social-twitter.svg);
+    background-position: 50% 50%;
+}
+
+.Social__linkedin a {
+    background-image: url(../../images/css/social-linkedin.svg);
+    background-position: 55% 50%;
+}
+
+.Social__instagram a {
+    background-image: url(../../images/css/social-instagram.svg);
+    background-position: 55% 50%;
+}

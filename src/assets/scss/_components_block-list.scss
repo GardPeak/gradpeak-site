@@ -1,0 +1,136 @@
+/* ==========================================================================
+   BLOCK-LIST
+   ========================================================================== */
+
+$-Block-spacing: $-space;
+$-Block-hover-bg: $-color-light-green;
+
+/**
+ * The block list component contains large, blocks of content and is used on
+ * the Case Studies page.
+ *
+ * 1. Offset the container for child `Block-list__item` spacing.
+ */
+
+.Block-list {
+    @extend .u-cf;
+    margin-top: $-space;
+    margin-left: -$-Block-spacing; /* [1] */
+    border-top: 1px solid $-border-color-light;
+
+    @include media(sm) {
+        margin-top: $-space--large;
+    }
+}
+
+/**
+ * Block-list with no spacing
+ */
+
+.Block-list--flush {
+    margin-left: 0;
+
+    > .Block-list__item {
+        padding-top: 0;
+        padding-left: 0;
+    }
+}
+
+/**
+ * 1. Space items apart
+ * 2. Two columns on wide enough devices.
+ * 3. Remove space from the first row.
+ * 4. This crazy stuff ensures that the list has no orhpans. Thanks to
+ *    Heydon Pickering for this:
+ *    http://www.heydonworks.com/article/tetris-and-the-power-of-css
+ */
+
+.Block-list__item {
+    position: relative;
+    padding-top: $-Block-spacing; /* [1] */
+    padding-left: $-Block-spacing; /* [1] */
+
+    @include media(sm) {
+        float: left;
+        width: 50%; /* [2] */
+
+        &:nth-of-type(-n+2) {
+            padding-top: 0; /* [3] */
+        }
+
+        &:nth-child(2n+1):last-child { /* [4] */
+            width: 100%;
+        }
+    }
+}
+
+.Block-list__link {
+    position: relative;
+    display: block;
+
+    &::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: background-color .4s ease-in-out, opacity .8s ease-in-out;
+        opacity: 0;
+    }
+
+    &:hover::after {
+        background-color: $-Block-hover-bg;
+        opacity: .8;
+    }
+}
+
+/**
+ * The block-list component contains big blocky images for a background. Lets
+ * make sure these position properly with an aspect ratio.
+ *
+ * 1. Faux fluid height in 16:9 ratio.
+ */
+
+.Block-list__image-background {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* [1] */
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/**
+ * Sit link text over the top of the list item.
+ *
+ * 1. Center the text-box vertically in the list item.
+ * 2. Optically sit the text itself centrally in the list item.
+ */
+
+.Block-list__title {
+    @include font-size(18px);
+    position: absolute;
+    top: 50%; /* [1] */
+    right: 0;
+    left: 0;
+    z-index: 1;
+    margin-top: -$-space; /* [2] */
+    text-align: center;
+    color: $-color-white;
+}
+
+.Block-list__text {
+    @include font-size(12px);
+    display: block;
+}
