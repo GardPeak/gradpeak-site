@@ -65,3 +65,11 @@ hr {
 .spaced {
     letter-spacing: 1px;
 }
+
+.adr {
+    margin-bottom: $-space;
+
+    @include media(md) {
+        margin-bottom: 0;
+    }
+}
