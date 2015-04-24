@@ -33,7 +33,7 @@ $-Map-ui-color: $-color-light-green;
 .Map__zoom-out {
     width: 32px;
     height: 32px;
-    margin-left: 10px;
+    margin-right: 10px;
     cursor: pointer;
     background-color: rgba($-Map-ui-color, .9);
     background-image: url(../../images/map/icon-controller.svg);
@@ -42,7 +42,7 @@ $-Map-ui-color: $-color-light-green;
     border-radius: 2px;
 
     @include media(sm) {
-        margin-left: 50px;
+        margin-right: 50px;
     }
 }
 
@@ -53,11 +53,12 @@ $-Map-ui-color: $-color-light-green;
 
 .Map__zoom-in {
     margin-top: 6px;
-    margin-bottom: 6px;
+    margin-bottom: $-space--small;
     background-position: 50% 9px;
 
     @include media(sm) {
         margin-top: $-space--large;
+        margin-bottom: ($-space / 4);
     }
 }
 

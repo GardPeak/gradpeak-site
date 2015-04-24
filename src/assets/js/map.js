@@ -14,9 +14,14 @@
 
     window.initialize = function() { // jshint ignore:line
         // set your google maps parameters
-        var latitude = 56.3075331,
-            longitude = -2.9444967,
-            map_zoom = 15;
+        // use latitude and longitude to center map for multiple locations
+        var latitude = 56.3109778,
+            longitude = -3.0078024,
+            map_zoom = 12,
+            locations = [
+                ['Office', 56.3075331, -2.9444967],
+                ['Yard', 56.295597, -3.0576701]
+            ];
 
         // google map custom marker icon - .png fallback for IE11
         var is_internetExplorer11 = navigator.userAgent.toLowerCase().indexOf('trident') > -1;
@@ -214,13 +219,17 @@
         // inizialize the map
         var map = new google.maps.Map(document.getElementById('map-canvas'), map_options);
 
-        // add a custom marker to the map
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(latitude, longitude),
-            visible: true,
-            icon: marker_url
-        });
-        marker.setMap(map);
+        var i = 0;
+        for (; i < locations.length; i++) {
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                visible: true,
+                icon: marker_url
+            });
+
+            // To add the marker to the map, call setMap();
+            marker.setMap(map);
+        }
 
         // add custom buttons for the zoom-in/zoom-out on the map
         function CustomZoomControl(controlDiv, map) {
@@ -245,8 +254,8 @@
         zoomControlDiv = document.createElement('div');
         zoomControl = new CustomZoomControl(zoomControlDiv, map);
 
-        // insert the zoom div on the top left of the map
-        map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
+        // insert the zoom div on the top right of the map
+        map.controls[google.maps.ControlPosition.RIGHT_TOP].push(zoomControlDiv);
     };
 
     // load the googlemaps api version 3 script
