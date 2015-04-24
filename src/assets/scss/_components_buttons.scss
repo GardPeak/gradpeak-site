@@ -3,11 +3,11 @@
    ========================================================================== */
 
 $-Button-font: inherit;
-$-Button-padding: (6px - 1) (12px - 1);
+$-Button-padding: (4px - 1) (6px - 1);
 $-Button-color: inherit;
-$-Button-background: $-color-dark-gray;
-$-Button-border-width: 1px;
-$-Button-border-color: darken($-color-dark-gray, 5);
+$-Button-border-width: 2px;
+$-Button-border-color: $-color-light-gray;
+$-Button-border-color-state: $-color-deep-green;
 $-Button-disabled-opacity: 0.6;
 
 /**
@@ -44,10 +44,11 @@ $-Button-disabled-opacity: 0.6;
     white-space: normal; /* [8] */
     color: $-Button-color;
     background: transparent;
-    background-color: $-Button-background;
     border-width: $-Button-border-width;
     border-style: solid;
-    border-color: $-Button-border-color;
+    border-color: transparent;
+    border-bottom-color: $-Button-border-color;
+    transition: border-color .4s ease-in-out;
     -webkit-appearance: none; /* [9] */
 }
 
@@ -77,6 +78,7 @@ $-Button-disabled-opacity: 0.6;
 .Button {
     @include ui-states {
         text-decoration: none;
+        border-bottom-color: $-Button-border-color-state;
     }
 }
 

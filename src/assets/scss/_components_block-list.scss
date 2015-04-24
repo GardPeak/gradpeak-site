@@ -43,9 +43,9 @@ $-Block-spacing: $-space;
             padding-top: 0; /* [3] */
         }
 
-        &:nth-child(2n+1):last-child { /* [4] */
-            width: 100%;
-        }
+        // &:nth-child(2n+1):last-child { /* [4] */
+        //     width: 100%;
+        // }
     }
 }
 
@@ -74,13 +74,6 @@ $-Block-spacing: $-space;
         object-fit: cover;
     }
 }
-
-/**
- * Sit link text over the top of the list item.
- *
- * 1. Center the text-box vertically in the list item.
- * 2. Optically sit the text itself centrally in the list item.
- */
 
 .Block-list__title {
     @include font-size(18px);
