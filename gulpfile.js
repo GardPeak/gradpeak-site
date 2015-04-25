@@ -75,7 +75,6 @@ gulp.task('js', function () {
 
         'bower_components/jquery/dist/jquery.js',
         'bower_components/picturefill/dist/picturefill.js',
-        'bower_components/bxslider-4/dist/jquery.bxslider.js',
         dirs.source + '/assets/js/*.js',
 
         // Exclude the following files
