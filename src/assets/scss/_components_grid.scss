@@ -65,14 +65,6 @@ $-Grid-large-gutter-size: $-space--large;
 }
 
 /**
- * Modifier: middle-align grid cells
- */
-
-.Grid--middle > .Grid__cell {
-    vertical-align: middle;
-}
-
-/**
  * Modifiers: reverse order of grid cells
  */
 
@@ -96,6 +88,17 @@ $-Grid-large-gutter-size: $-space--large;
     }
 }
 
+/**
+ * Modifier: remove grid spacing's
+ */
+
+.Grid--flush {
+    margin-left: 0;
+
+    > .Grid__cell {
+        padding-left: 0;
+    }
+}
 
 /* Grid cell
    ========================================================================== */
