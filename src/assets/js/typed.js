@@ -401,6 +401,7 @@
         startDelay: 0,   // time before typing starts
         backSpeed: 0,    // backspacing speed
         backDelay: 1000, // time before backspacing
+        showCursor: false,
         loop: true
     });
 })(jQuery);
