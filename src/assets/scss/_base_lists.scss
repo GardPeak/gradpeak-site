@@ -33,3 +33,33 @@ li {
         display: inline-block;
     }
 }
+
+/**
+ * Chunky UI list of info for Homepage
+ */
+
+.ui-list {
+    margin-left: $-space--small;
+}
+
+.ui-list span {
+    position: relative;
+    display: block;
+    margin: $-space--small 0;
+    padding: 4px 4px 4px $-space;
+    background-color: $-color-faint-gray;
+    border-radius: 3px;
+}
+
+.ui-list span:before{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: -18px;
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    background-color: $-color-brand-green;
+    border: 4px solid $-color-white;
+    border-radius: 2em;
+}
