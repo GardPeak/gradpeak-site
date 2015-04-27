@@ -6,12 +6,21 @@
     padding-top: $-space;
     padding-bottom: $-space;
 
-    @include media(md) {
+    @include media(sm) {
         padding-top: $-space--large;
         padding-bottom: $-space--large;
     }
 }
 
+/**
+ * Remove bottom padding for last Block component and any bottom margins applied
+ * to elements inside the component.
+ */
+
 .Block--last {
     padding-bottom: 0;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
