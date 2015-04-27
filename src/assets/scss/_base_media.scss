@@ -22,6 +22,23 @@ img {
 }
 
 /**
+ * Homepage gallery images have are seperated by a 4px border, lets seperate
+ * gallery images by applying a margin along the bottom of the first gallery.
+ */
+
+.homepage-image {
+    margin-bottom: 4px;
+
+    @include media(sm) {
+        padding-top: $-space;
+    }
+
+    @include media(md) {
+        padding-top: 0;
+    }
+}
+
+/**
  * 1. Google Maps breaks if `max-width: 100%` acts upon it; use their selector
  *    to remove the effects.
  * 2. If a `width` and/or `height` attribute have been explicitly defined, let’s
