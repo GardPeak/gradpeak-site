@@ -70,15 +70,7 @@ img[height] {
  */
 
 .bordered {
-    padding: $-space--small;
+    padding: 6px;
     background-color: $-color-faint-gray;
     border: 1px solid darken($-color-faint-gray, 5);
-}
-
-/**
- * Rounded image corners
- */
-
-.rounded {
-    border-radius: 100%;
 }
