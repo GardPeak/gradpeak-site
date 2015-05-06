@@ -38,6 +38,15 @@
             }
         }
 
+        @include media(lg) {
+            background-image: url(../../images/css/logo--large.png);
+
+            @include media(x2) {
+                background-image: url(../../images/css/logo--large@2x.png);
+                background-size: 510px 59px;
+            }
+        }
+
         a {
             display: block;
             width: 100%;
@@ -46,6 +55,11 @@
             @include media(sm) {
                 width: 354px;
                 height: 42px;
+            }
+
+            @include media(lg) {
+                width: 510px;
+                height: 59px;
             }
         }
     }

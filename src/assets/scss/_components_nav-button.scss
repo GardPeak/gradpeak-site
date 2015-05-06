@@ -26,6 +26,11 @@ $-Nav-button-bg: transparent;
         right: 10%;
     }
 
+    @include media(lg) {
+        top: 50px;
+        right: 15%;
+    }
+
     svg {
         position: absolute;
         top: 0;
