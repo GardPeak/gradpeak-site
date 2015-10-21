@@ -1,8 +1,0 @@
-{
-    "name": "Frontend-Toolkit",
-    "version": "1.0.0",
-    "dependencies": {
-        "jquery": "~1.11.2",
-        "picturefill": "~2.3.1"
-    }
-}

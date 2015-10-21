@@ -1,44 +1,3 @@
-/**
- * SCAFFOLDING
- *
- * Tasks
- * |
- * |– lint:js
- * |    |- gulpfile         # linting of gulpfile
- * |    |- all JS           # linting of all JS (excluding 3rd party and vendor)
- * |
- * |– js
- * |    |- concatenate      # Concatenates all JS to `main.js`
- * |    |– uglifyJS         # Minifying of `main.js` output `main.min.js`
- * |
- * |– images
- * |    |– minify           # Minifying of PNG, JPEG, GIF and SVG images
- * |
- * |– styles
- * |    |– compile          # Generate CSS from SCSS to `main.css`
- * |    |- prefix           # Prefix generated CSS
- * |    |– concatenate      # All CSS to `all.css`
- * |    |- minify           # Minifying of stylesheet
- * |
- * |– styles:fallback
- * |    |– compile          # Generate IE CSS from `main.css`
- * |    |- minify           # Minifying of `ie.css`
- * |
- * |– jekyll
- * |    |– build            # Building of Jekyll
- * |    |- rebuild          # Re-building of Jekyll with a page reload
- * |
- * |– server
- * |    |- browsersync      # Local server powered by BrowserSync
- * |    |– watch            # Watch for changes on all source files
- * |
- * |– deploy                # Push the `dist` directory to gh-pages remote branch
- * |– clean                 # Delete the output directory and files
- * |- serve                 # Execute build and local server
- * |– build (default)       # Execute all build tasks
- * |
- */
-
 var gulp        = require('gulp');
 var plugins     = require('gulp-load-plugins')();
 var cp          = require('child_process');
@@ -74,8 +33,8 @@ gulp.task('lint:js', function () {
 gulp.task('js', function () {
     return gulp.src([
 
-        'bower_components/jquery/dist/jquery.js',
-        'bower_components/picturefill/dist/picturefill.js',
+        'node_modules/jquery/dist/jquery.js',
+        'node_modules/picturefill/dist/picturefill.js',
         dirs.source + '/assets/js/*.js',
 
         // Exclude the following files
