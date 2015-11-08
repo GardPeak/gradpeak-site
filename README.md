@@ -1,4 +1,4 @@
-# GP
+# Gradual Peak
 
 This project contains the source code powering [gradualpeak.com](http://gradualpeak.com).
 
