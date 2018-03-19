@@ -1,0 +1,32 @@
+# Dependencies
+markdown:     kramdown
+highlighter:  rouge
+
+kramdown:
+    auto_ids: true
+
+# Permalinks
+permalink:    pretty
+
+# Serving
+baseurl:      ""
+url:          "http://gradualpeak.com"
+port:         8000
+host:         127.0.0.1
+encoding:     UTF-8
+exclude:
+    - node_modules/
+    - package.json
+    - package-lock.json
+    - README.md
+
+sass:
+    sass_dir: _scss
+    style: compressed
+
+# Meta
+title: "Gradual Peak"
+description: "Gradual Peak is a Building and Development company on a mission to bring professionalism, innovation, quality and integrity to the construction market."
+
+# Variables
+email: gradpeak@aol.com

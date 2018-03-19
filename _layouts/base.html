@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="{{ page.page-class }} no-js" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+
+        <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+        <meta name="description" content="{{ site.description }}">
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Advent+Pro:700,600|Oxygen:400,300">
+        <link rel="stylesheet" href="/assets/css/style.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
+
+        <link rel="icon" type="image/gif" href="/assets/images/icons/favicon.png">
+        <link rel="apple-touch-icon" href="/assets/images/icons/apple-touch-icon.png">
+
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    </head>
+
+    <body>
+
+        <div class="Container-page">
+
+            {% include header.html %}
+
+                {{ content }}
+
+            {% include footer.html %}
+
+        </div>
+        <!-- .Container-page -->
+
+        {% include nav-button.html %}
+        {% include nav-fullscreen.html %}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="/assets/js/main.js"></script>
+
+    </body>
+</html>
