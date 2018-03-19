@@ -8,29 +8,25 @@
  * 1. Ensure the page always fills at least the entire height of the viewport.
  * 2. Prevent scrolling horizontally to hide either overflow from page-Container
  *    or Nav-overlay.
- * 3. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
- *    navigating between pages that do/do not have enough content to produce
- *    scrollbars naturally.
- * 4. Set the default font with `font-size`, `line-height` and `font-family` for
+ * 3. Set the default font with `font-size`, `line-height` and `font-family` for
  *    the entire project, sourced from our `_theme_map.scss`.
- * 5. Prevent certain mobile browsers from automatically zooming fonts.
- * 6. Fonts on OSX will look more consistent with other systems that do not
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
  *    render text using sub-pixel anti-aliasing.
- * 7. Remove gray highlight when tapping Links in Mobile Safari.
+ * 6. Remove gray highlight when tapping Links in Mobile Safari.
  */
 
 html {
     min-height: 100%; /* [1] */
     overflow-x: hidden; /* [2] */
-    overflow-y: scroll; /* [3] */
-    font: $-font-base; /* [4] */
+    font: $-font-base; /* [3] */
     font-weight: $-font-weight-light;
     color: $-color-base;
 
-    -webkit-text-size-adjust: 100%; /* [5] */
-        -ms-text-size-adjust: 100%; /* [5] */
-    -moz-osx-font-smoothing: grayscale; /* [6] */
-    -webkit-font-smoothing: antialiased; /* [6] */
-            font-smoothing: antialiased; /* [6] */
-    -webkit-tap-highlight-color: rgba($-color-black, 0); /* [7] */
+    -webkit-text-size-adjust: 100%; /* [4] */
+        -ms-text-size-adjust: 100%; /* [4] */
+    -moz-osx-font-smoothing: grayscale; /* [5] */
+    -webkit-font-smoothing: antialiased; /* [5] */
+            font-smoothing: antialiased; /* [5] */
+    -webkit-tap-highlight-color: rgba($-color-black, 0); /* [6] */
 }
